@@ -1,0 +1,16 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/.vs
+/DH.CentralControl/.config
+/DH.CentralControl/bin/Debug/net9.0
+/DH.CentralControl/obj
+/dh.centralcontrol.client/.vscode
+/dh.centralcontrol.client/obj
+/DH.CentralControl.Server/.config
+/DH.CentralControl.Server/bin
+/DH.CentralControl.Server/obj
+*.user
+/DH.CentralControl.Server/DH.CentralControl.Server.xml
+/SampleMcpServer/obj
