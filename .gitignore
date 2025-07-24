@@ -14,3 +14,4 @@
 *.user
 /DH.CentralControl.Server/DH.CentralControl.Server.xml
 /SampleMcpServer/obj
+/SampleMcpServer/bin/Debug/net8.0

@@ -1,24 +1,24 @@
-# MCP Server
+# MCP 服务器
 
-This README was created using the C# MCP server project template. It demonstrates how you can easily create an MCP server using C# and publish it as a NuGet package.
+这个 README 是使用 C# MCP 服务器项目模板创建的。它演示了如何使用 C# 轻松创建 MCP 服务器并将其发布为 NuGet 包。
 
-See [aka.ms/nuget/mcp/guide](https://aka.ms/nuget/mcp/guide) for the full guide.
+查看完整指南请访问 [aka.ms/nuget/mcp/guide](https://aka.ms/nuget/mcp/guide)。
 
-Please note that this template is currently in an early preview stage. If you have feedback, please take a [brief survey](http://aka.ms/dotnet-mcp-template-survey).
+请注意，此模板目前处于早期预览阶段。如果您有反馈，请参与这个[简短调查](http://aka.ms/dotnet-mcp-template-survey)。
 
-## Checklist before publishing to NuGet.org
+## 发布到 NuGet.org 之前的检查清单
 
-- Test the MCP server locally using the steps below.
-- Update the package metadata in the .csproj file, in particular the `<PackageId>`.
-- Update `.mcp/server.json` to declare your MCP server's inputs.
-  - See [configuring inputs](https://aka.ms/nuget/mcp/guide/configuring-inputs) for more details.
-- Pack the project using `dotnet pack`.
+- 使用以下步骤在本地测试 MCP 服务器。
+- 更新 .csproj 文件中的包元数据，特别是 `<PackageId>`。
+- 更新 `.mcp/server.json` 来声明您的 MCP 服务器的输入。
+  - 更多详细信息请查看[配置输入](https://aka.ms/nuget/mcp/guide/configuring-inputs)。
+- 使用 `dotnet pack` 打包项目。
 
-The `bin/Release` directory will contain the package file (.nupkg), which can be [published to NuGet.org](https://learn.microsoft.com/nuget/nuget-org/publish-a-package).
+`bin/Release` 目录将包含包文件 (.nupkg)，可以[发布到 NuGet.org](https://learn.microsoft.com/nuget/nuget-org/publish-a-package)。
 
-## Developing locally
+## 本地开发
 
-To test this MCP server from source code (locally) without using a built MCP server package, you can configure your IDE to run the project directly using `dotnet run`.
+要从源代码（本地）测试此 MCP 服务器而不使用构建的 MCP 服务器包，您可以配置您的 IDE 使用 `dotnet run` 直接运行项目。
 
 ```json
 {
@@ -29,30 +29,30 @@ To test this MCP server from source code (locally) without using a built MCP ser
       "args": [
         "run",
         "--project",
-        "<PATH TO PROJECT DIRECTORY>"
+        "<项目目录路径>"
       ]
     }
   }
 }
 ```
 
-## Testing the MCP Server
+## 测试 MCP 服务器
 
-Once configured, you can ask Copilot Chat for a random number, for example, `Give me 3 random numbers`. It should prompt you to use the `get_random_number` tool on the `SampleMcpServer` MCP server and show you the results.
+配置完成后，您可以向 Copilot Chat 请求一个随机数，例如，`给我 3 个随机数`。它应该会提示您在 `SampleMcpServer` MCP 服务器上使用 `get_random_number` 工具并显示结果。
 
-## Publishing to NuGet.org
+## 发布到 NuGet.org
 
-1. Run `dotnet pack -c Release` to create the NuGet package
-2. Publish to NuGet.org with `dotnet nuget push bin/Release/*.nupkg --api-key <your-api-key> --source https://api.nuget.org/v3/index.json`
+1. 运行 `dotnet pack -c Release` 创建 NuGet 包
+2. 使用 `dotnet nuget push bin/Release/*.nupkg --api-key <your-api-key> --source https://api.nuget.org/v3/index.json` 发布到 NuGet.org
 
-## Using the MCP Server from NuGet.org
+## 从 NuGet.org 使用 MCP 服务器
 
-Once the MCP server package is published to NuGet.org, you can configure it in your preferred IDE. Both VS Code and Visual Studio use the `dnx` command to download and install the MCP server package from NuGet.org.
+一旦 MCP 服务器包发布到 NuGet.org，您就可以在您首选的 IDE 中配置它。VS Code 和 Visual Studio 都使用 `dnx` 命令从 NuGet.org 下载和安装 MCP 服务器包。
 
-- **VS Code**: Create a `<WORKSPACE DIRECTORY>/.vscode/mcp.json` file
-- **Visual Studio**: Create a `<SOLUTION DIRECTORY>\.mcp.json` file
+- **VS Code**: 创建 `<工作空间目录>/.vscode/mcp.json` 文件
+- **Visual Studio**: 创建 `<解决方案目录>\.mcp.json` 文件
 
-For both VS Code and Visual Studio, the configuration file uses the following server definition:
+对于 VS Code 和 Visual Studio，配置文件使用以下服务器定义：
 
 ```json
 {
@@ -61,9 +61,9 @@ For both VS Code and Visual Studio, the configuration file uses the following se
       "type": "stdio",
       "command": "dnx",
       "args": [
-        "<your package ID here>",
+        "<您的包 ID>",
         "--version",
-        "<your package version here>",
+        "<您的包版本>",
         "--yes"
       ]
     }
@@ -71,15 +71,15 @@ For both VS Code and Visual Studio, the configuration file uses the following se
 }
 ```
 
-## More information
+## 更多信息
 
-.NET MCP servers use the [ModelContextProtocol](https://www.nuget.org/packages/ModelContextProtocol) C# SDK. For more information about MCP:
+.NET MCP 服务器使用 [ModelContextProtocol](https://www.nuget.org/packages/ModelContextProtocol) C# SDK。有关 MCP 的更多信息：
 
-- [Official Documentation](https://modelcontextprotocol.io/)
-- [Protocol Specification](https://spec.modelcontextprotocol.io/)
-- [GitHub Organization](https://github.com/modelcontextprotocol)
+- [官方文档](https://modelcontextprotocol.io/)
+- [协议规范](https://spec.modelcontextprotocol.io/)
+- [GitHub 组织](https://github.com/modelcontextprotocol)
 
-Refer to the VS Code or Visual Studio documentation for more information on configuring and using MCP servers:
+有关配置和使用 MCP 服务器的更多信息，请参考 VS Code 或 Visual Studio 文档：
 
-- [Use MCP servers in VS Code (Preview)](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
-- [Use MCP servers in Visual Studio (Preview)](https://learn.microsoft.com/visualstudio/ide/mcp-servers)
+- [在 VS Code 中使用 MCP 服务器（预览）](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
+- [在 Visual Studio 中使用 MCP 服务器（预览）](https://learn.microsoft.com/visualstudio/ide/mcp-servers)
