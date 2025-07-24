@@ -4,10 +4,10 @@ using Microsoft.Extensions.Logging;
 
 var builder = Host.CreateApplicationBuilder(args);
 
-// ÅäÖÃËùÓĞÈÕÖ¾Êä³öµ½ stderr£¨stdout ÓÃÓÚ MCP Ğ­ÒéÏûÏ¢£©¡£
+// é…ç½®æ‰€æœ‰æ—¥å¿—è¾“å‡ºåˆ° stderrï¼ˆstdout ç”¨äº MCP åè®®æ¶ˆæ¯ï¼‰ã€‚
 builder.Logging.AddConsole(o => o.LogToStandardErrorThreshold = LogLevel.Trace);
 
-// Ìí¼Ó MCP ·şÎñ£ºÒªÊ¹ÓÃµÄ´«Êä·½Ê½£¨stdio£©ºÍÒª×¢²áµÄ¹¤¾ß¡£
+// æ·»åŠ  MCP æœåŠ¡ï¼šè¦ä½¿ç”¨çš„ä¼ è¾“æ–¹å¼ï¼ˆstdioï¼‰å’Œè¦æ³¨å†Œçš„å·¥å…·ã€‚
 builder.Services
     .AddMcpServer()
     .WithStdioServerTransport()
