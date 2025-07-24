@@ -4,10 +4,10 @@ using Microsoft.Extensions.Logging;
 
 var builder = Host.CreateApplicationBuilder(args);
 
-// Configure all logs to go to stderr (stdout is used for the MCP protocol messages).
+// 配置所有日志输出到 stderr（stdout 用于 MCP 协议消息）。
 builder.Logging.AddConsole(o => o.LogToStandardErrorThreshold = LogLevel.Trace);
 
-// Add the MCP services: the transport to use (stdio) and the tools to register.
+// 添加 MCP 服务：要使用的传输方式（stdio）和要注册的工具。
 builder.Services
     .AddMcpServer()
     .WithStdioServerTransport()
