@@ -4,6 +4,8 @@ VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleMcpServer", "SampleMcpServer\SampleMcpServer.csproj", "{68AF086E-D678-2E8B-97A9-0FBEAD30CFA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleMcpClient", "SampleMcpClient\SampleMcpClient.csproj", "{BDDCF139-B295-498B-AFDE-5ADA15A29B07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,6 +16,10 @@ Global
 		{68AF086E-D678-2E8B-97A9-0FBEAD30CFA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68AF086E-D678-2E8B-97A9-0FBEAD30CFA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68AF086E-D678-2E8B-97A9-0FBEAD30CFA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDDCF139-B295-498B-AFDE-5ADA15A29B07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDDCF139-B295-498B-AFDE-5ADA15A29B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDDCF139-B295-498B-AFDE-5ADA15A29B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDDCF139-B295-498B-AFDE-5ADA15A29B07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
